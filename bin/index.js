@@ -4,7 +4,6 @@ const fs = require('fs')
 let npmPrivate = require('../lib')
 let clientRoot =  path.resolve(__dirname) 
 let packageJsonPath = path.join(clientRoot,'../client/package.json')
-debugger
 try{
     let content = fs.readFileSync(packageJsonPath,'utf8')
     content = JSON.parse(content)
