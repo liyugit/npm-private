@@ -1,0 +1,10 @@
+{
+    "versions":{
+        "1.0.0":{
+            "dependencies":{
+                "c":"1.0.0"
+            },
+            "dist":"/mod-a/download/a-1.0.0.tgz"
+        }
+    }
+}

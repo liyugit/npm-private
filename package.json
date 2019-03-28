@@ -1,0 +1,20 @@
+{
+  "name": "npm-private",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "npm-private": "index.js"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liyu",
+  "license": "ISC",
+  "dependencies": {
+    "tar": "^4.4.8"
+  }
+}

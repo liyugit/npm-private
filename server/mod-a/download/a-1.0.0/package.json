@@ -1,0 +1,14 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "a",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "c": "1.0.0"
+  },
+  "author": "liyu",
+  "license": "ISC"
+}
