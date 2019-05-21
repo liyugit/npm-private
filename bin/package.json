@@ -6,10 +6,9 @@
       "lib": "lib"
     },
     "dependencies": {
-      "@xsyx/header":"1.0.6",
-      "@xsyx/component-b": "1.0.1",
-      "@xsyx/icons": "1.0.5",
-      "@xsyx/nav-bar": "1.0.5"
+      "@xsyx/header":"1.0.3",
+      "@xsyx/component-a": "1.0.0",
+      "@xsyx/component-b": "1.0.0"
     },
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"

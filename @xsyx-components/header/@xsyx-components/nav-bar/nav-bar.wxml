@@ -1,0 +1,69 @@
+<!--components/nav-bar/nav-bar.wxml-->
+<view wx:if="{{mode === 'normal' && navBar && navBar.home}}"  class='nav-bar-frame'>
+<view class='nav-bar'
+    style="{{iphonex ? 'padding-bottom:68rpx;':''}} background-image: url({{navBar.bgUrl}});">
+    <a bindtap="goIndex"
+        style="color: {{channel === 'home' ? '#F5032A': 'auto'}}"
+        class='nav-item'
+        hover-stay-time="50">
+        <image src="{{navBar.home.selectedUrl}}" class='icon'
+            wx:if="{{channel === 'home' || (!isShowPage && navBar.home.isIconGif)}}"
+            binderror="imgError"
+            data-imgNode="home.selectedUrl" data-errorUrl="{{navBar.home.defSUrl}}"></image>
+        <image wx:else src="{{navBar.home.unSelectUrl}}" class='icon'
+            binderror="imgError"
+            data-imgNode="home.unSelectUrl" data-errorUrl="{{navBar.home.defUnSUrl}}"></image>
+        <text class="text">{{navBar.home.navName}}</text>
+    </a>
+    <a wx:if="{{channel === 'brand' || showBrand}}" bindtap="goBrand"
+        style="color: {{channel === 'brand' ? '#F5032A': 'auto'}}"
+        class='nav-item'
+        hover-stay-time="50">
+        <image class='png' src='{{navBar.brand.selectedUrl}}'
+            wx:if="{{channel === 'brand' || (!isShowPage && navBar.brand.isIconGif)}}"
+            binderror="imgError"
+            data-imgNode="brand.selectedUrl" data-errorUrl="{{navBar.brand.defSUrl}}"></image>
+        <image wx:else class='gif' src='{{navBar.brand.unSelectUrl}}'
+            binderror="imgError"
+            data-imgNode="brand.unSelectUrl" data-errorUrl="{{navBar.brand.defUnSUrl}}"></image>
+        <view wx:if="{{hasNewBrand}}" class="corner">NEW</view>
+        <text class="text">{{navBar.brand.navName}}</text>
+    </a>
+    <a bindtap="goCart" style="color: {{channel === 'cart' ? '#F5032A': 'auto'}}"
+        class='nav-item'
+        hover-stay-time="50">
+        <image src="{{navBar.cart.selectedUrl}}" class='icon'
+            wx:if="{{channel === 'cart' || (!isShowPage && navBar.cart.isIconGif)}}"
+            binderror="imgError"
+            data-imgNode="cart.selectedUrl" data-errorUrl="{{navBar.cart.defSUrl}}"></image>
+        <image wx:else src="{{navBar.cart.unSelectUrl}}" class='icon'
+            binderror="imgError"
+            data-imgNode="cart.unSelectUrl" data-errorUrl="{{navBar.cart.defUnSUrl}}"></image>
+        <text class="text">{{navBar.cart.navName}}</text>
+        <text wx:if="{{cartCount}}" class='text cartCount'>{{cartCount}}</text>
+    </a>
+    <a bindtap="goCenter" style="color: {{channel === 'center' ? '#F5032A': 'auto'}}"
+        class='nav-item'
+        hover-stay-time="50">
+        <image src="{{navBar.center.selectedUrl}}" class='icon'
+            wx:if="{{channel === 'center' || (!isShowPage && navBar.center.isIconGif)}}"
+            binderror="imgError"
+            data-imgNode="center.selectedUrl" data-errorUrl="{{navBar.center.defSUrl}}"></image>
+        <image wx:else src="{{navBar.center.unSelectUrl}}" class='icon'
+            binderror="imgError"
+            data-imgNode="center.unSelectUrl" data-errorUrl="{{navBar.center.defUnSUrl}}"></image>
+        <text class="text">{{navBar.center.navName}}</text>
+    </a>
+</view>
+</view>
+
+<view wx:elif="{{mode==='ghost'}}" class='ghost-nav-bar'>
+    <a bindtap="goCart" class='nav-item cart' hover-stay-time="50">
+        <icon size="52" type="gouwuche" />
+        <text wx:if="{{cartCount}}" class='text cartCount'>{{cartCount}}</text>
+    </a>
+    <a bindtap="goIndex" class='nav-item' hover-stay-time="50" style="{{ghostIsShowHome?'':'display:none;'}}">
+        <icon size="52" type="shouye" />
+    </a>
+    <!-- <view class='dot' style='{{dotStyle}}'></view> -->
+</view>
