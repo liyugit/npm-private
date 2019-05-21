@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "npm-private": "index.js"
+    "npm-x": "bin/index.js"
   },
   "directories": {
     "lib": "lib"
@@ -15,6 +15,7 @@
   "author": "liyu",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.20.0",
     "fs-extra": "^8.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
