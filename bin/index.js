@@ -3,7 +3,7 @@
 const path = require('path')
 const fs = require('fs')
 const program = require('commander')
-let npmPrivate = require('../lib')
+let npmX = require('../lib')
 
 program
     .command('install')
@@ -15,7 +15,7 @@ program
         try {
             let content = fs.readFileSync(packageJsonPath, 'utf8')
             content = JSON.parse(content)
-            npmPrivate.install(content.dependencies)
+            npmX.install(content.dependencies)
         } catch (e) {
             console.log(e)
         }
