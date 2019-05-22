@@ -8,4 +8,4 @@ dist/
 
 .vscode
 
-@xsyx-components/
+/**/@xsyx-components/
