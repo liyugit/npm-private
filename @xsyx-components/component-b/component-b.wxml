@@ -1,6 +1,0 @@
-<!--components/header/header.wxml-->
-<view class="header">
-    <text>{{title}}</text>
-    <slot class="header-inner"></slot>
-</view>
-
